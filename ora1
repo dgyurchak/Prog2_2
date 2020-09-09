@@ -1,0 +1,85 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("hello");
+
+//        int n = sc.nextInt();
+//        System.out.println(n);
+
+//        String sor = sc.nextLine();
+//        System.out.println(sor);
+//
+//        String[] t = sor.split(" ");
+//        System.out.println(Arrays.toString(t));
+//
+//        for (String item : t) {
+//            System.out.println(item);
+//            System.out.println(Integer.parseInt(item)+2);
+//        }
+
+//        String s = sc.nextLine();
+//        Scanner sors = new Scanner(s);
+//
+//        while(sors.hasNext()){
+//            System.out.println(sors.nextInt());
+//        }
+
+//        String s;
+//        for(int i = 0; i < 6; i++){
+//            s = sc.nextLine();
+//            System.out.println(s);
+//        }
+
+//        int n;
+//        while(true) {
+//            n = sc.nextInt();
+//            if (n == 0) {
+//                break;
+//            }
+//            System.out.println(n);
+//        }
+
+//        int n = sc.nextInt();
+//        float a;
+//        float sum = 0;
+//        float avg = 0;
+//        for(int i = 0; i < n; i++) {
+//            a = sc.nextInt();
+//            sum += a;
+//        }
+//        avg = sum / n;
+//        System.out.println(avg);
+//
+//    }
+
+//        int db = 0, sum = 0;
+//        int n;
+//        while((n = sc.nextInt()) != 0) {
+//            sum += n;
+//            db++;
+//        }
+//        System.out.println(sum / db);
+//        //System.out.println(db);
+//
+
+//    String s = "alma";
+//    System.out.println(s.length());
+//    System.out.println(s.substring(0, 2));
+
+    String s;
+    while(sc.hasNext()) {
+        s = sc.nextLine();
+        if(s.length() < 10) {
+            System.out.println(s);
+        }
+        else {
+            System.out.println(s.substring(0, 10));
+        }
+    }
+
+    }
+}

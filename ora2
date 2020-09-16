@@ -1,0 +1,104 @@
+import java.util.Arrays;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class MySecondClass {
+    public static void main(String[] args) {
+
+//        double pi = 3.142;
+//
+//        System.out.println(pi);
+//        System.out.printf("%.2f%n", pi);
+//        System.out.println(String.format("%.2f", pi));
+//
+//        System.out.printf(Locale.ENGLISH, "%.2f%n", pi);
+//        System.out.println(String.format(new Locale("en", "US"), "%.2f", pi));
+//
+//        Locale.setDefault(new Locale("en", "US"));
+//
+//        System.out.println(Arrays.toString(Locale.getAvailableLocales()));
+
+//        Scanner sc = new Scanner(System.in);
+//        int n;
+//        for(n = sc.nextInt(); n != 0; n = sc.nextInt()){        //vegtelenig futhat le amig n > 0
+//            System.out.println(n);
+//        }
+
+//        int[] t = new int[]{3, 7 , 2, 6, 7};
+//        int help;
+//        for (int i = 0, j = t.length-1; i < j; i++, j--) {
+//            help = t[i];
+//            t[i] = t[j];
+//            t[j] = help;
+//        }
+//
+//        System.out.println(Arrays.toString(t));
+
+//        System.out.println(MySecondClass.fibo(10));
+//
+//        String s1 = new String("alma");
+//        String s2 = "alma";
+//
+//        System.out.println(s1 == s2);       //megvizsgalja h ugyan arra a memoriacimre mutat
+//        System.out.println(s1.equals(s2));  //megvizsgalja a tartalmat
+
+//        Scanner sc = new Scanner(System.in);
+//        String s;
+//        while(true) {
+//            s = sc.nextLine();
+//            if (s.equals("THE END")) {
+//                break;
+//            }
+//            boolean isPoli = true;
+//            for (int i = 0, j = s.length()-1; i < j; i++, j--){
+//                if (s.charAt(i) != s.charAt(j)) {
+//                    isPoli = false;
+//                    break;
+//                }
+//            }
+//            System.out.println(isPoli ? "YES" : "NO");
+//        }
+
+        Scanner sc = new Scanner(System.in);
+        String[] sor;
+
+        while(sc.hasNext()){
+            int db = 0;
+            sor = sc.nextLine().split(",|:");
+            for (int i = 1; i < sor.length; i+=2){
+                db += Integer.parseInt(sor[i]);
+            }
+            System.out.println(sor.length / 2 + " " + db);
+
+        }
+    }
+
+    public static int fibo2(int n){     //rekurziv megoldas
+        if (n == 1){
+            return 0;
+        }
+        if (n == 2) {
+            return 1;
+        }
+        return fibo2(n-1) + fibo2(n-2);
+    }
+
+    public static int fibo(int n){
+        int a = 0;
+        int b = 1;
+        int c = 0;
+        if (n == 1){
+            return 0;
+        }
+        if (n == 2) {
+            return 1;
+        }
+        for (int i = 2; i < n; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        return b;
+
+    }
+}
